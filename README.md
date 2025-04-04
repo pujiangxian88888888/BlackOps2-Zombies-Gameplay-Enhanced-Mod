@@ -4,6 +4,25 @@
 
 [作者Bilibli](space.bilibili.com/24929681)
 
+# 如何安装mod？
+* 首先前往release模块下载编译好的游戏mod。
+* 你需要在steam上拥有使命召唤：黑色行动2，**并完整安装包括战役，多人与僵尸在内的所有部分。**
+* 前往https://plutonium.pw/,下载启动平台，按照网站教程配置好游戏，找到%AppData%\Local\Plutonium\storage\t6\mods这个文件夹，将下载好的mod文件放入。
+* 启动游戏装载mod即可游玩。
+
+# 如何编译？
+* 如果你只是改动了 attachmentunique, maps, images, scripts, ui, ui_mp和weapons这7个文件夹中的内容，你只需要选中这七个文件夹，将它们打包为RAR压缩文件，**并设置压缩等级为0（仅存储）**，然后改名为mod.iwd
+* 如果你要改动zone以及其他文件，按照下列方法执行：
+* 下载编译器：https://github.com/Laupetin/OpenAssetTools/releases
+* 右键打开源代码中的build.bat，找到下列两行：
+    ```
+    set OAT_GAME="K:\cod"
+    set OAT_BASE="K:\oat"
+    ```
+* 将第一个路径改为你的黑色行动2游戏根目录，将第二个路径改为你下载的编译器的根目录。
+* **警告：如果你使用的是非英文版的windows系统，则这两个文件夹必须置于磁盘分区的根目录下，且文件夹名只能包含英文字母，否则可能导致无法编译！你可以将steam中的BO2本地文件夹复制到别处并重命名。**
+* 运行此BAT文件，将得到的ff, sabs, sabl与iwd文件置于你的mod文件夹。
+ 
 # 改动记录
 * 没有改动的原作者的特性不会在此提及。只会提及新增的改动
 
@@ -245,6 +264,24 @@
 * 完成115个爆头击杀后奖励的升级版STG44或者加利尔已被替换为升级版M27或者AN94
 * 挖掘骷髅堆可能出现的MP40,STG44，阔剑地雷，AK74U已被替换为MP7,peacekeeper或M27
 
+# How to install?
+* Download the mod from the **Release**(not source code)
+* you need own call of duty:black ops 2 on steam，**and install the full game include campaign,multiplayer and zombies**
+* navigate to https://plutonium.pw/, then find the folder located in %AppData%\Local\Plutonium\storage\t6\mods,put all files in it.
+* Launch the game, load the mod and enjoy.
+
+# How to compile?
+* if you just change **attachmentunique, maps, images, scripts, ui, ui_mp and weapons** folder，Save it as .rar file **with compression level 0** and then rename the rar file to mod.iwd
+* if you need to modify the zone and other files, follow the steps:
+* Download compilerfrom https://github.com/Laupetin/OpenAssetTools/releases
+*right click and open build.bat,find there 2 lines
+    ```
+    set OAT_GAME="K:\cod"
+    set OAT_BASE="K:\oat"
+    ```
+* set the 1st path to your game root,2nd path to your compiler.
+* **Warning: If you are using a non-English version of windows, the two folders must be placed in the root directory of the disk partition, and the folder name can only contain English letters, otherwise it may cannot be compiled! You can copy the BO2 local folder in steam and rename it elsewhere.**
+* Run this BAT,and put all the ff,sabl,sabs files to your mod folder.
 
 # Black Ops2 Zombies Gameplay Enhanced
 
