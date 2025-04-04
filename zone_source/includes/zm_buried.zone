@@ -1055,3 +1055,6 @@ script,clientscripts/mp/gametypes/zgrief.csc
 script,clientscripts/mp/gametypes/zmeat.csc
 
 menulist,ui_mp/hud_zgrief.txt
+
+weapon,tar21_upgraded_zm
+weapon,tar21_zm

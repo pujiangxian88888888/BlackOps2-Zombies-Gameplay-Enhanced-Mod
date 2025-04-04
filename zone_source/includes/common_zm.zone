@@ -3,3 +3,6 @@
 material,generic_filter_zm_turned
 
 camo,camo_raygun_mark2
+
+//script,scripts/zm/reimagined/_zm_craftables.gsc
+//script,scripts/zm/reimagined/_zm_craftables.csc

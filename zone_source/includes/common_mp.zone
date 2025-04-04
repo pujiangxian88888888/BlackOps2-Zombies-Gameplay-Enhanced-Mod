@@ -1131,6 +1131,14 @@ xmodel,t6_attach_optic_holo_view
 xmodel,t6_attach_optic_holo_ads
 xmodel,t6_attach_optic_holo_world
 
+image,~~-gmtl_t6_wpn_minigun_spc-rg~9dec8b98
+image,mtl_t6_wpn_minigun_nml
+image,~mtl_t6_wpn_minigun_ao-l&mtl_~571c054f
+image,~-gmtl_t6_wpn_minigun_col
+image,~mtl_t6_wpn_minigun_ir-r&mtl_~4af4ec85
+material,mc/mtl_t6_wpn_minigun_thermal
+material,mc/mtl_t6_wpn_minigun
+
 attachment,holo
 attachment,gl
 attachment,sf
@@ -1159,6 +1167,7 @@ camo,camo_saiga
 camo,camo_srm1216
 camo,camo_usrpg
 camo,camo_m32
+camo,camo_minigun
 camo,camo_knife
 camo,camo_ballistic_knife
 camo,camo_crossbow

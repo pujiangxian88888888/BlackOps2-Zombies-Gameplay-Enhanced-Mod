@@ -542,27 +542,84 @@ CoD.Loading.StartLoading = function(LoadingWidget, f8_arg1)
 end
 
 function CoD.Loading.SetMapNameText(LoadingWidget)
-	local mapName = UIExpression.DvarString(nil, "ui_mapname")
-	local mapLocation = UIExpression.DvarString(nil, "ui_zm_mapstartlocation")
-	local gametype = UIExpression.DvarString(nil, "ui_gametype")
-	local mapNameText = CoD.Loading.GetMapNameDisplayName(mapName, gametype, mapLocation)
+	local mapName = UIExpression.DvarString(nil, "mapname")
+	--local mapLocation = UIExpression.DvarString(nil, "ui_zm_mapstartlocation")
+	--local gametype = UIExpression.DvarString(nil, "ui_gametype")
+	--local mapNameText = CoD.Loading.GetMapNameDisplayName(mapName, gametype, mapLocation)
+	local mapNameText = "1234"
+	if mapName == nil then
+		mapNameText = "nil_mapname"
+	elseif mapName == "" then
+		mapNameText = "null_str_mapname"
+	else
+		mapNameText = "defined"
+	end
+	if mapName == "zm_transit" then
+		mapNameText = "TRANZIT"
+	elseif mapName == "zm_nuked"  then
+		mapNameText = "NUKETOWN"
+	elseif mapName == "zm_highrise" then
+		mapNameText = "DIE RISE"
+	elseif mapName == "zm_prison" then
+		mapNameText = "MOB OF THE DEAD"
+	elseif mapName == "zm_buried" then
+		mapNameText = "BURIED"
+	elseif mapName == "zm_tomb" then
+		mapNameText = "ORIGINS"
+	end
 	LoadingWidget.mapNameLabel:setText(mapNameText)
 end
 
 function CoD.Loading.SetMapLocationText(LoadingWidget)
-	local mapName = UIExpression.DvarString(nil, "ui_mapname")
-	local mapLocationText = CoD.Loading.GetMapLocationDisplayName(mapName)
+	local mapName = UIExpression.DvarString(nil, "mapname")
+	local mapLocationText = "5678"
+	if mapName == nil then
+		mapLocationText = "nil_mapLocation"
+	elseif mapName == "" then
+		mapLocationText = "null_str_mapLocation"
+	else
+		mapLocationText = "defined"
+	end
+	if mapName == "zm_transit" then
+		mapLocationText = "Hanford Site, Washington State, U.S.A."
+	elseif mapName == "zm_nuked" then
+		mapLocationText = "Camp Edward, Nevada, U.S.A."
+	elseif mapName == "zm_highrise" then
+		mapLocationText = "Pudong New District, Shanghai, China"
+	elseif mapName == "zm_prison" then
+		mapLocationText = "Alcatraz Island, San Francisco Bay, U.S.A."
+	elseif mapName == "zm_buried" then
+		mapLocationText = "Namibe, Angola"
+	elseif mapName == "zm_tomb" then
+		mapLocationText = "Bar-le-Due, Northern France"
+	end
+	--local mapLocationText = CoD.Loading.GetMapLocationDisplayName(mapName)
 	LoadingWidget.mapLocationLabel:setText(mapLocationText)
 end
 
 function CoD.Loading.SetGametypeText(LoadingWidget)
-	local gametype = UIExpression.DvarString(nil, "ui_gametype")
-	local gametypeText = CoD.Loading.GetGametypeDisplayName(gametype)
+	local mapName = UIExpression.DvarString(nil, "mapname")
+	local gametypeText = "9999"
+	
+	if mapName == "zm_transit" then
+		gametypeText = "October 21st, 2035"
+	elseif mapName == "zm_nuked" then
+		gametypeText = "October 13th, 2025"
+	elseif mapName == "zm_highrise" then
+		gametypeText = "October 22nd, 2035"
+	elseif mapName == "zm_prison" then
+		gametypeText = "December 31st, 1933"
+	elseif mapName == "zm_buried" then
+		gametypeText = "December 31st, 2035"
+	elseif mapName == "zm_tomb" then
+		gametypeText = "June 4th, 1918"
+	end
 	LoadingWidget.gametypeLabel:setText(gametypeText)
 end
 
 function CoD.Loading.GetMapNameDisplayName(map, gametype, location)
 	if gametype == CoD.Zombie.GAMETYPE_ZCLASSIC then
+		local mapName = UIExpression.DvarString(nil, "ui_mapname")
 		return CoD.GetZombieGameTypeDescription(gametype, map)
 	end
 

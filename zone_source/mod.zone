@@ -24,4 +24,6 @@ include,includes/common
 include,includes/weapons!exptitus6_sp
 include,includes/weapons!metalstorm_mms_sp
 
+//include,includes/minigun_alcatraz_zm
+
 include,reimagined

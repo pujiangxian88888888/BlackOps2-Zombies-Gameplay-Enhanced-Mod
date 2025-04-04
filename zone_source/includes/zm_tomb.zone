@@ -18,6 +18,16 @@ weapon,sf_qcw05_upgraded_zm
 weapon,type95_zm
 weapon,type95_upgraded_zm
 
+weapon,scar_zm
+weapon,scar_upgraded_zm
+weapon,ksg_zm
+weapon,ksg_upgraded_zm
+weapon,evoskorpion_upgraded_zm
+weapon,evoskorpion_zm
+
+weapon,hamr_zm
+weapon,hamr_upgraded_zm
+
 xmodel,p6_zm_tm_vending_three_gun
 
 xmodel,t6_wpn_none_view
@@ -28,3 +38,5 @@ xanim,viewmodel_bare_hands_falling
 material,generic_filter_zombie_blood_b
 
 camo,camo_raygun
+
+
